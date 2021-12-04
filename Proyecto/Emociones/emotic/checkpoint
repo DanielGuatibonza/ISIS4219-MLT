@@ -1,0 +1,2 @@
+model_checkpoint_path: "modelo_reg_mse_weights"
+all_model_checkpoint_paths: "modelo_reg_mse_weights"
