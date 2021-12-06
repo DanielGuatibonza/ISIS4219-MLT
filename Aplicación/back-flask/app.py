@@ -1,5 +1,5 @@
 import os
-
+import json
 import base64
 import numpy as np
 import cv2
@@ -14,9 +14,11 @@ from tensorflow.keras.applications import VGG16, InceptionV3
 import tensorflow as tf
 from flask import Flask
 from flask import jsonify, request
+from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
+    CORS(app)
     return app
 
 SIZE = (200, 200)
@@ -45,18 +47,20 @@ model_reg_base.load_weights(os.environ.get('REG_WEIGHTS'))
 
 @app.route('/api/predict', methods=['POST'])
 def predict():
-    json = request.json
-
-    if json.get('imageUri') is None:
+    json_req = request.json
+    if json_req is None:
+        json_req = json.loads(request.data.decode("utf-8"))    
+    if json_req.get('imageUri') is None:
         return jsonify({'message': 'Bad request'}), 400
     
-    print(json.get('imageUri').split(",")[0])
-    image_b64 = json.get('imageUri').split(",")[1]
+    print(json_req.get('imageUri').split(",")[0])
+    image_b64 = json_req.get('imageUri').split(",")[1]
     binary = base64.b64decode(image_b64)
     image = np.asarray(bytearray(binary), dtype="uint8")
     imageBGR = cv2.imdecode(image, cv2.IMREAD_COLOR)
     imageRGB = cv2.cvtColor(imageBGR , cv2.COLOR_BGR2RGB)
-    final_image = cv2.resize(imageRGB, SIZE)
+    final_image = cv2.resize(imageRGB, SIZE).astype(np.float32)
+    final_image = final_image / 255.
 
     bbox = model_bbox_base.predict(np.array([final_image]))[0].tolist()
     emo = model_reg_base.predict(np.array([final_image]))[0].tolist()

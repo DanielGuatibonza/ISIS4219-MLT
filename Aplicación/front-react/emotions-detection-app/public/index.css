@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#logo {
+  margin-top: 1%;
+  margin-left: 2%;
+}
+
+#bienvenidos {
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+#descripcion {
+  margin-top: 0%;
+  margin-left: 2%;
+}
+
+#seleccionar-foto {
+  width: 100%;
+  margin-top: 2%;
+  margin-left: 25%;
+}
+
+#logo-imagen {
+  margin-left: 10%;
+  width: 80%;
+}
+
+#detectar-foto {
+  width: 100%;
+  margin-top: 2%;
+  margin-left: 25%;
+}
+
+#imagenes {
+  margin-top: 5%;
+}
+
+#foto-seleccionada {
+  width: 400px;
+  height: 400px;
+}
+
+.prediccion {
+  margin-top: 10%;
+}
+
+#container-circles {
+  position: absolute;
+  left: 50%;
+  bottom: 35%;
+}
+#outer-circle {
+  left: -37px;
+  height: 75px;
+  width: 75px;
+  background-color: hsla(0, 0%, 100%, 0.4);
+  z-index: 1;
+}
+#inner-circle,
+#outer-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+#inner-circle {
+  left: 50%;
+  top: 38px;
+  height: 44px;
+  width: 44px;
+  background: #fff;
+  margin: -22px 0 0 -22px;
+  z-index: 2;
+}
+#inner-circle.is-clicked {
+  height: 38px;
+  width: 38px;
+  margin: -19px 0 0 -19px;
+}
+#white-flash.normal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.9s ease-out;
+  -o-transition: opacity 0.9s ease-out;
+  transition: opacity 0.9s ease-out;
+}
+#white-flash.do-transition {
+  opacity: 0;
+  background: #fff;
+}
+#display-error {
+  color: #000;
+  background-color: #fff;
+}
+.react-html5-camera-photo {
+  position: relative;
+  text-align: center;
+}
+.react-html5-camera-photo > img,
+.react-html5-camera-photo > video {
+  width: 400px;
+  height: 400px;
+}
+.react-html5-camera-photo > .display-error {
+  width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 400px), (max-height: 400px) {
+  .react-html5-camera-photo > .display-error,
+  .react-html5-camera-photo > img,
+  .react-html5-camera-photo > video {
+    width: 400px;
+    height: 400px;
+  }
+}
+.react-html5-camera-photo-fullscreen > img,
+.react-html5-camera-photo-fullscreen > video {
+  width: 100vw;
+  height: 100vh;
+}
+.react-html5-camera-photo-fullscreen > video {
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+.react-html5-camera-photo-fullscreen > .display-error {
+  width: 100vw;
+  height: 100vh;
+}
+/*# sourceMappingURL=index.css.map*/
+
+.btn {
+  background-color: #64b9fc;
+  color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
