@@ -26,3 +26,14 @@ Una vez efectuados estos pasos, solo resta ejecutar la aplicación desde Python 
     
     > python app.py
   
+### Front-end
+El front-end fue desarollado en React por lo que inicialmente se debe instalar Node.js para lo cual se puede seguir el siguiente tutorial [Tutorial instalación Node.js](https://phoenixnap.com/kb/install-node-js-npm-on-windows). Después de realizar esto, se debe ejecutar una consola en la [ruta base del proyecto del front-end](https://github.com/DanielGuatibonza/ISIS4219-MLT/tree/main/Aplicación/front-react/emotions-detection-app) y correr el siguiente comando para instalar todas las dependncias:
+    
+    > npm install
+    
+De forma seguida, se puede ejecutar la aplicación como tal con la instrucción
+    
+    > npm start
+    
+    
+Cabe aclarar que la ejecución de ambas aplicaciones se realiza de forma local en un entorno de desarrollo. No obstante, una vez ejecutado el último comando y teniendo en ejecución la aplicación del back-end, se desplegará la aplicación web en el navegador predeterminado y se podrán cargar imágenes o tomar fotos para efectuar la detección de personas y emociones.
