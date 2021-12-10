@@ -14,7 +14,7 @@ Para la ejecución de la aplicación, se deben tener de forma local todos los ar
 El back-end fue desarrollado en el framework Flask por lo que en principio se debe tener instalado Python con una versión >=3.7. Adicionalmente, se deben seguir las siguientes intrucciones:
 - Descargar los archivos de pesos descritos anteriormente en la sección de acceso al notebook.
 - Agregar las variables de entorno que hacen referencia a los archivos de pesos. Esto se puede realizar desde la consola de PowrShell con los siguientes comandos reemplazando la respectiva ruta en la que fueron descargados los archivos
-- 
+
     > setx BBOX_WEIGHTS <ruta>/modelo_bbox_mse_weights
     
     > setx REG_WEIGHTS <ruta>/modelo_reg_mse_weights
