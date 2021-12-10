@@ -15,9 +15,9 @@ El back-end fue desarrollado en el framework Flask por lo que en principio se de
 - Descargar los archivos de pesos descritos anteriormente en la sección de acceso al notebook.
 - Agregar las variables de entorno que hacen referencia a los archivos de pesos. Esto se puede realizar en Windows desde la consola de PowerShell con los siguientes comandos reemplazando la respectiva ruta en la que fueron descargados los archivos
 
-    > setx BBOX_WEIGHTS __ruta__/modelo_bbox_mse_weights
+    > setx BBOX_WEIGHTS __ruta__\modelo_bbox_mse_weights
     
-    > setx REG_WEIGHTS __ruta__/modelo_reg_mse_weights
+    > setx REG_WEIGHTS __ruta__\modelo_reg_mse_weights
   
     O en la terminal de Linux con:
     
