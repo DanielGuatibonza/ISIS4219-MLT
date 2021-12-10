@@ -20,5 +20,6 @@ El back-end fue desarrollado en el framework Flask por lo que en principio se de
     > pip install -r requierements.txt
   
 Una vez efectuados estos pasos, solo resta ejecutar la aplicación desde Python con el comando:
+    
     > python app.py
   
