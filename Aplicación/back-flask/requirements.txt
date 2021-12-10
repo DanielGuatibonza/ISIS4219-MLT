@@ -6,3 +6,4 @@ pandas
 opencv-python
 scikit-learn
 flask
+flask_cors
